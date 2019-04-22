@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExchangeController" customModule="Bitrate" customModuleProvider="target">
+            <connections>
+                <outlet property="bitcounTextField" destination="jmQ-7Z-Ukl" id="B3B-7C-fgd"/>
+                <outlet property="currencyTextField" destination="lT7-Wj-SVr" id="oDJ-vV-h62"/>
+                <outlet property="lettersView" destination="SCR-4I-BIc" id="are-7m-l5l"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cVH-hx-00M">
+                    <rect key="frame" x="16" y="70" width="343" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-46-DgD">
+                            <rect key="frame" x="0.0" y="5" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="E03-jf-3Ry"/>
+                                <constraint firstAttribute="width" constant="30" id="o2o-nL-wQ1"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="10" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jmQ-7Z-Ukl">
+                            <rect key="frame" x="34" y="0.0" width="309" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="9wR-fq-mMQ"/>
+                                <constraint firstAttribute="height" constant="40" id="jbf-gu-T0n"/>
+                            </constraints>
+                            <color key="textColor" name="appDarkBlue"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="ytI-ns-NfW"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="jmQ-7Z-Ukl" firstAttribute="centerY" secondItem="cVH-hx-00M" secondAttribute="centerY" id="1eN-4c-oRz"/>
+                        <constraint firstAttribute="trailing" secondItem="jmQ-7Z-Ukl" secondAttribute="trailing" id="QGX-Vn-4RD"/>
+                        <constraint firstItem="jmQ-7Z-Ukl" firstAttribute="leading" secondItem="Ay2-46-DgD" secondAttribute="trailing" constant="4" id="gZc-Yv-2QB"/>
+                        <constraint firstItem="Ay2-46-DgD" firstAttribute="centerY" secondItem="cVH-hx-00M" secondAttribute="centerY" id="huI-r1-MRO"/>
+                        <constraint firstItem="Ay2-46-DgD" firstAttribute="leading" secondItem="cVH-hx-00M" secondAttribute="leading" id="nXC-xz-HLu"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3x9-Ry-FT1">
+                    <rect key="frame" x="16" y="126" width="343" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCR-4I-BIc" customClass="LetterView" customModule="Bitrate" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="5" width="30" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="oUE-aZ-RLX"/>
+                                <constraint firstAttribute="width" constant="30" id="vXQ-NP-CSn"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="10" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="lT7-Wj-SVr">
+                            <rect key="frame" x="34" y="0.0" width="309" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="bBO-dh-vZJ"/>
+                            </constraints>
+                            <color key="textColor" name="appDarkBlue"/>
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="2H3-9f-yKo"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="lT7-Wj-SVr" firstAttribute="centerY" secondItem="3x9-Ry-FT1" secondAttribute="centerY" id="1wl-rI-d1p"/>
+                        <constraint firstItem="SCR-4I-BIc" firstAttribute="centerY" secondItem="3x9-Ry-FT1" secondAttribute="centerY" id="YXO-GU-yNG"/>
+                        <constraint firstItem="lT7-Wj-SVr" firstAttribute="leading" secondItem="SCR-4I-BIc" secondAttribute="trailing" constant="4" id="bGq-qH-Snn"/>
+                        <constraint firstAttribute="trailing" secondItem="lT7-Wj-SVr" secondAttribute="trailing" id="ibe-eU-r2S"/>
+                        <constraint firstItem="SCR-4I-BIc" firstAttribute="leading" secondItem="3x9-Ry-FT1" secondAttribute="leading" id="ozv-bX-bFe"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="appLightBlue"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cVH-hx-00M" secondAttribute="trailing" constant="16" id="8Sj-TY-5iN"/>
+                <constraint firstItem="cVH-hx-00M" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Hme-ls-GjA"/>
+                <constraint firstItem="3x9-Ry-FT1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="o0o-uP-F9Q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3x9-Ry-FT1" secondAttribute="trailing" constant="16" id="rH5-Ho-m71"/>
+                <constraint firstItem="cVH-hx-00M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ved-8X-tv9"/>
+                <constraint firstItem="3x9-Ry-FT1" firstAttribute="top" secondItem="cVH-hx-00M" secondAttribute="bottom" constant="16" id="xVc-Qf-gAO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-74.400000000000006" y="121.88905547226388"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Bitcoin" width="300" height="300"/>
+        <namedColor name="appDarkBlue">
+            <color red="0.31764705882352939" green="0.40784313725490196" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appLightBlue">
+            <color red="0.96078431372549022" green="0.97647058823529409" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
